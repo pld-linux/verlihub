@@ -8,9 +8,9 @@ Group:		Applications
 Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}.tar.gz
 # Source0-md5:	c3c90d34e76bcdd299d105829d22c330
 URL:		http://verlihub.sf.net/
+BuildRequires:	GeoIP-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	GeoIP-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	mysql-devel
@@ -38,7 +38,8 @@ Dzia³a wspólnie z serwerem MySQL.
 
 %configure
 
-%{__make} LDFLAGS=-lGeoIP
+%{__make} \
+	LDFLAGS="-lGeoIP"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -56,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README TODO docs/*
 %attr(755,root,root) %{_bindir}/*
-%dir %{_datadir}/verlihub/*
+%dir %{_datadir}/verlihub
 %attr(755,root,root) %{_datadir}/verlihub/*
