@@ -2,7 +2,7 @@ Summary:	DC Hub
 Summary(pl):	Koncentrator DC
 Name:		verlihub
 Version:	0.9.7
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}.tar.gz
@@ -79,6 +79,9 @@ install -d $RPM_BUILD_ROOT%{_datadir}/verlihub
 	DESTDIR=$RPM_BUILD_ROOT
 
 cp -f scripts/{c*,in*,r*,s*,t*} $RPM_BUILD_ROOT%{_datadir}/verlihub
+
+# remove makefile from docs
+rm -f docs/Makefile*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
