@@ -86,12 +86,14 @@ rm -f docs/Makefile*
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
+
 %files 
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO docs/*
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
-%attr(755,root,root) %{_libdir}/lib*.so.*
 %dir %{_datadir}/verlihub
 %attr(755,root,root) %{_datadir}/verlihub/*
 
