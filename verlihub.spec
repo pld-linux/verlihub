@@ -38,8 +38,12 @@ Dzia³a wspólnie z serwerem MySQL.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT%{_docdir}
 
 install src/verlihub $RPM_BUILD_ROOT%{_bindir}
+cp -r scripts $RPM_BUILD_ROOT%{_docdir}
+cp -r docs $RPM_BUILD_ROOT%{_docdir}
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -48,3 +52,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/*
+%attr(644,root,root) %{_docdir}/*
