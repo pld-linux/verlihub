@@ -11,6 +11,10 @@ URL:		http://verlihub.sf.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	GeoIP-devel
+BuildRequires:	libstdc++-devel
+BuildRequires:	libtool
+BuildRequires:	mysql-devel
+BuildRequires:	pcre-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,19 +42,19 @@ Dzia³a wspólnie z serwerem MySQL.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_docdir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/verlihub}
 
 install src/verlihub $RPM_BUILD_ROOT%{_bindir}
-cp -r scripts $RPM_BUILD_ROOT%{_docdir}
-cp -r docs $RPM_BUILD_ROOT%{_docdir}
 
+mv -f scripts/def_config docs
+cp -f scripts/* $RPM_BUILD_ROOT%{_datadir}/verlihub
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files 
 %defattr(644,root,root,755)
-%doc README
+%doc ChangeLog README TODO docs/*
 %attr(755,root,root) %{_bindir}/*
-%attr(644,root,root) %{_docdir}/*
+%dir %{_datadir}/verlihub/*
+%attr(755,root,root) %{_datadir}/verlihub/*
