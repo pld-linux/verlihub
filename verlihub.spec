@@ -1,12 +1,12 @@
 Summary:	DC Hub
 Summary(pl):	Koncentrator DC
 Name:		verlihub
-Version:	0.9.7
+Version:	0.9.8a
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}.tar.gz
-# Source0-md5:	769dc0eb03e7ea082b543eb9c1a5f7e0
+# Source0-md5:	65a917c4f327db12a521c002848474f9
 URL:		http://verlihub.sf.net/
 BuildRequires:	GeoIP-devel
 BuildRequires:	autoconf
@@ -78,7 +78,7 @@ install -d $RPM_BUILD_ROOT%{_datadir}/verlihub
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-cp -f scripts/{c*,in*,r*,s*,t*} $RPM_BUILD_ROOT%{_datadir}/verlihub
+cp -f scripts/{c*,im*,v*} $RPM_BUILD_ROOT%{_datadir}/verlihub
 
 # remove makefile from docs
 rm -f docs/Makefile*
