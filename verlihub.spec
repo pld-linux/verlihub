@@ -92,6 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO docs/*
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/lib*.so.*
 %dir %{_datadir}/verlihub
 %attr(755,root,root) %{_datadir}/verlihub/*
 
