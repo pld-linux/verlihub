@@ -1,15 +1,16 @@
 Summary:	DC Hub
 Summary(pl):	Koncentrator DC
 Name:		verlihub
-Version:	0.9.4a
+Version:	0.9.6
 Release:	0.1
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}.tar.gz
-# Source0-md5:	f25b6157cc8eec3ca393b2744158b3ea
+# Source0-md5:	c3c90d34e76bcdd299d105829d22c330
 URL:		http://verlihub.sf.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	GeoIP-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,7 +34,7 @@ Dzia³a wspólnie z serwerem MySQL.
 
 %configure
 
-%{__make}
+%{__make} LDFLAGS=-lGeoIP
 
 %install
 rm -rf $RPM_BUILD_ROOT
