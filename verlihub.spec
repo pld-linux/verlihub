@@ -2,7 +2,7 @@ Summary:	DC Hub
 Summary(pl):	Koncentrator DC
 Name:		verlihub
 Version:	0.9.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}.tar.gz
@@ -91,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO docs/*
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/lib*.so.*
 %dir %{_datadir}/verlihub
 %attr(755,root,root) %{_datadir}/verlihub/*
 
