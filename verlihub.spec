@@ -1,12 +1,17 @@
+#
+# TODO: fix build:
+#	"Sorry, cannot currently work without pthreads"
+#
 Summary:	DC Hub
 Summary(pl):	Koncentrator DC
 Name:		verlihub
-Version:	0.9.8a
-Release:	1
+%define		subver	b
+Version:	0.9.8
+Release:	0.%{subver}.1
 License:	GPL
 Group:		Applications
-Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}.tar.gz
-# Source0-md5:	65a917c4f327db12a521c002848474f9
+Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}%{subver}.tar.gz
+# Source0-md5:	f5a715af67d60c38cc1e57cb4265185b
 URL:		http://verlihub.sf.net/
 BuildRequires:	GeoIP-devel
 BuildRequires:	autoconf
@@ -59,7 +64,7 @@ This package contains static librarys for verlihub.
 Ten pakiet zawiera statyczne biblioteki verlihub.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{subver}
 
 %build
 %{__libtoolize}
