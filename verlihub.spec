@@ -14,6 +14,7 @@ BuildRequires:	automake
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	mysql-devel
+BuildRequires:	openssl-devel
 BuildRequires:	pcre-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,6 +34,11 @@ Summary:	Header files for verlihub
 Summary(pl):	Pliki nag³ówkowe dla verlihub
 Group:		Development/Languages
 Requires:	%{name} = %{version}-%{release}
+Requires:	GeoIP-devel
+Requires:	libstdc++-devel
+Requires:	mysql-devel
+Requires:	openssl-devel
+Requires:	pcre-devel
 
 %description devel
 This package includes the header files for developing.
@@ -56,14 +62,14 @@ Ten pakiet zawiera statyczne biblioteki verlihub.
 %setup -q
 
 %build
+%{__libtoolize}
 %{__aclocal} 
 %{__autoconf}
+%{__autoheader}
 %{__automake}
-
 %configure
 
-%{__make} \
-	LDFLAGS="-lGeoIP"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -76,23 +82,21 @@ cp -f scripts/{c*,in*,r*,s*,t*} $RPM_BUILD_ROOT%{_datadir}/verlihub
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-rm -f docs/Makefile*
 
 %files 
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO docs/*
 %attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %dir %{_datadir}/verlihub
 %attr(755,root,root) %{_datadir}/verlihub/*
-%{_libdir}/*.la
-%{_libdir}/*.0*
-%{_libdir}/libverlihub
-%{_libdir}/libvhapi
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/verlihub/*
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/lib*.a
