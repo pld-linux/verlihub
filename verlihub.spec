@@ -1,7 +1,3 @@
-#
-# TODO: fix build:
-#	"Sorry, cannot currently work without pthreads"
-#
 Summary:	DC Hub
 Summary(pl):	Koncentrator DC
 Name:		verlihub
