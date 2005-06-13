@@ -8,7 +8,7 @@ License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}%{subver}.tar.gz
 # Source0-md5:	f5a715af67d60c38cc1e57cb4265185b
-URL:		http://verlihub.sf.net/
+URL:		http://verlihub.sourceforge.net/
 BuildRequires:	GeoIP-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
