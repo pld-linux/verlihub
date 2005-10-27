@@ -3,7 +3,7 @@ Summary(pl):	Koncentrator DC
 Name:		verlihub
 %define		subver	b
 Version:	0.9.8
-Release:	0.%{subver}.2
+Release:	0.%{subver}.3
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}%{subver}.tar.gz
