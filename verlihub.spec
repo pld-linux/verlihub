@@ -1,5 +1,5 @@
 Summary:	DC Hub
-Summary(pl.UTF-8):   Koncentrator DC
+Summary(pl.UTF-8):	Koncentrator DC
 Name:		verlihub
 %define		subver	b
 Version:	0.9.8
@@ -32,7 +32,7 @@ Działa wspólnie z serwerem MySQL.
 
 %package devel
 Summary:	Header files for verlihub
-Summary(pl.UTF-8):   Pliki nagłówkowe dla verlihub
+Summary(pl.UTF-8):	Pliki nagłówkowe dla verlihub
 Group:		Development/Languages
 Requires:	%{name} = %{version}-%{release}
 Requires:	GeoIP-devel
@@ -49,7 +49,7 @@ Ten pakiet zawiera pliki nagłówkowe.
 
 %package static
 Summary:	Static verlihub librarys
-Summary(pl.UTF-8):   Biblioteki statyczne verlihub
+Summary(pl.UTF-8):	Biblioteki statyczne verlihub
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
