@@ -1,5 +1,5 @@
 Summary:	DC Hub
-Summary(pl):	Koncentrator DC
+Summary(pl.UTF-8):   Koncentrator DC
 Name:		verlihub
 %define		subver	b
 Version:	0.9.8
@@ -24,15 +24,15 @@ VerliHub is a Direct Connect protocol server (Hub), runs on linux,
 written in C++, relatively low CPU & RAM usage, and several useful
 features. Uses MySQL database.
 
-%description -l pl
-VerliHub jest koncentratorem protoko≥u Direct Connect. Dzia≥a piÍknie
-na linuksie, napisane jest w C++, charakteryzuje siÍ relatywnie niskim
-zuøyciem procesora i pamiÍci oraz wykorzystaniem uøytecznych patentÛw.
-Dzia≥a wspÛlnie z serwerem MySQL.
+%description -l pl.UTF-8
+VerliHub jest koncentratorem protoko≈Çu Direct Connect. Dzia≈Ça piƒôknie
+na linuksie, napisane jest w C++, charakteryzuje siƒô relatywnie niskim
+zu≈ºyciem procesora i pamiƒôci oraz wykorzystaniem u≈ºytecznych patent√≥w.
+Dzia≈Ça wsp√≥lnie z serwerem MySQL.
 
 %package devel
 Summary:	Header files for verlihub
-Summary(pl):	Pliki nag≥Ûwkowe dla verlihub
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe dla verlihub
 Group:		Development/Languages
 Requires:	%{name} = %{version}-%{release}
 Requires:	GeoIP-devel
@@ -44,19 +44,19 @@ Requires:	pcre-devel
 %description devel
 This package includes the header files for developing.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag≥Ûwkowe.
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nag≈Ç√≥wkowe.
 
 %package static
 Summary:	Static verlihub librarys
-Summary(pl):	Biblioteki statyczne verlihub
+Summary(pl.UTF-8):   Biblioteki statyczne verlihub
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This package contains static librarys for verlihub.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Ten pakiet zawiera statyczne biblioteki verlihub.
 
 %prep
