@@ -1,9 +1,9 @@
 Summary:	DC Hub
 Summary(pl.UTF-8):	Koncentrator DC
 Name:		verlihub
-%define		subver	b
+%define		subver	d-RC2
 Version:	0.9.8
-Release:	0.%{subver}.3
+Release:	0.1
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}%{subver}.tar.gz
@@ -60,7 +60,7 @@ This package contains static librarys for verlihub.
 Ten pakiet zawiera statyczne biblioteki verlihub.
 
 %prep
-%setup -q -n %{name}-%{version}%{subver}
+%setup -q -n %{name}
 
 %build
 %{__libtoolize}
