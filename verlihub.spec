@@ -3,11 +3,11 @@ Summary(pl.UTF-8):	Koncentrator DC
 Name:		verlihub
 %define		subver	d-RC2
 Version:	0.9.8
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}%{subver}.tar.gz
-# Source0-md5:	f5a715af67d60c38cc1e57cb4265185b
+# Source0-md5:	0824be2cf3af08ccda1638c5d5d0bc4e
 URL:		http://verlihub.sourceforge.net/
 BuildRequires:	GeoIP-devel
 BuildRequires:	autoconf
