@@ -1,14 +1,14 @@
+%define		subver	d-RC2
 Summary:	DC Hub
 Summary(pl.UTF-8):	Koncentrator DC
 Name:		verlihub
-%define		subver	d-RC2
 Version:	0.9.8
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}%{subver}.tar.gz
 # Source0-md5:	0824be2cf3af08ccda1638c5d5d0bc4e
-URL:		http://verlihub.sourceforge.net/
+URL:		http://www.verlihub-project.org/doku.php
 BuildRequires:	GeoIP-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -64,7 +64,7 @@ Ten pakiet zawiera statyczne biblioteki verlihub.
 
 %build
 %{__libtoolize}
-%{__aclocal} 
+%{__aclocal}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
@@ -90,7 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files 
+%files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO docs/*
 %attr(755,root,root) %{_bindir}/*
