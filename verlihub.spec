@@ -3,7 +3,7 @@ Summary:	DC Hub
 Summary(pl.UTF-8):	Koncentrator DC
 Name:		verlihub
 Version:	0.9.8
-Release:	1
+Release:	0.%{subver}.4
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/verlihub/%{name}-%{version}%{subver}.tar.gz
